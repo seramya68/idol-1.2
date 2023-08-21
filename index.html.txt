@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Idol Consulting Chat Channel</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="app.js"></script>
+</head>
+<body>
+    <div class="welcome-banner">
+        <h1>Welcome to the Idol Consulting Chat Channel</h1>
+        <p>Discover your ideal idol based on your preferences!</p>
+    </div>
+    <div class="survey-box">
+        <h2>Find Your Ideal Idol</h2>
+        <form id="survey-form">
+            <label for="gender">Gender of Idol:</label>
+            <select id="gender" required>
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+            </select>
+            <label for="location">Learn about idols in:</label>
+            <select id="location" required>
+                <option value="Vietnam">Vietnam</option>
+                <option value="International">International</option>
+            </select>
+            <label for="interests">Interests:</label>
+            <select id="interests" onchange="showOptions(this.value)" required>
+                <option value="">Select...</option>
+                <option value="Sports">Sports and Recreational sports</option>
+                <option value="MusicArt">Music and Art</option>
+                <option value="Politics">Politics</option>
+                <option value="Acting">Acting and entertainment</option>
+                <option value="Community">Community influencers through good deeds</option>
+            </select>
+            <div id="options" style="display: none;"></div>
+            <button type="button" onclick="showIdolInfo()">Show Idol Info</button>
+        </form>
+    </div>
+    <div id="idol-info" class="result" style="display: none;"></div>
+</body>
+</html>
